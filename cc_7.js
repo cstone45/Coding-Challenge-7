@@ -23,3 +23,12 @@ const calculateLoyaltyDiscount = (amount, years) => { //Establishes calculateLoy
 };
 calculateLoyaltyDiscount(100, 6); //Logs Discounted Price with an output of $85.00
 calculateLoyaltyDiscount(200, 2); //Logs Discounted Price with an output of $190.00
+
+//Task 4: Parameters and Arguments
+function calculateShippingCost(weight, location, expedited = false) { //Establishes calculateShippingCost as a function
+    let costRate = {"USA": 5 + (weight * 0.5) + 10, "Canada": 10 + (weight * 0.7),}; //Establishes the individual equations used to calculate Shipping Cost by Location
+    let shippingCost = costRate[location]; //Creates the equation to calculate the Shipping Cost
+    console.log(`Shipping Cost: $${shippingCost.toFixed(2)}`); //Logs the function to the console and sets the outputs to 2 decimal places
+};
+calculateShippingCost(10, "USA", true); //Logs the function with an output of 20
+calculateShippingCost(5, "Canada", false); //Logs the function with an output of 13.50
