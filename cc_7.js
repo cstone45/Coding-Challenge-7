@@ -13,3 +13,13 @@ function calculateHourlyWage(salary, hoursPerWeek) { //Declares the Function
 };
 calculateHourlyWage(52000, 40); //Logs Hourly Wage with an output of $25.00
 calculateHourlyWage(75000, 35); //Logs Hourly Wage with an output of $42.21
+
+//Task 3: Arrow Function
+const calculateLoyaltyDiscount = (amount, years) => { //Establishes calculateLoyaltyDsicount as a function
+    if (years >= 5) discountedPrice = amount - (amount * 0.15); //Establishes a parameter for the equation
+    else if (years >=3) discountedPrice = amount - (amount * 0.1); //Establishes a parameter for the equation
+    else discountedPrice = amount - (amount * 0.05); //Establishes a parameter for the equation
+    console.log(`Discounted Price: $${discountedPrice.toFixed(2)}`); //Logs the equation to the console and creates a function to log the results of the equation to 2 decimal places
+};
+calculateLoyaltyDiscount(100, 6); //Logs Discounted Price with an output of $85.00
+calculateLoyaltyDiscount(200, 2); //Logs Discounted Price with an output of $190.00
