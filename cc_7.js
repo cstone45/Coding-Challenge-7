@@ -40,3 +40,11 @@ function calculateLoanInterest(principle, rate, years) { //Establishes the calcu
 };
 console.log(calculateLoanInterest(1000, 0.05, 3)); //Logs parameters into the equation and generated an output of $150.00
 console.log(calculateLoanInterest(5000, 0.07, 5)); //Logs parameters into the equation and generates an output of $1750.00
+
+//Task 6: Higher Order Functions
+function filterHighValueTransactions(transactions, filterFunction) { //Establishes the function for the problem
+let highValueTransaction = transactions.filter(filterFunction); //Establishes what a high value function is in context of the situation
+console.log(`High Value Functions: ${highValueTransaction}`); //Logs the function to the console as a template literal
+};
+let transactions = [500, 1200, 3000, 800, 2200]; //Establishes the array containing the transactions
+filterHighValueTransactions(transactions, amount => amount > 1000); //Establishes the perameters for the equation to abide by to generate the output
