@@ -32,3 +32,11 @@ function calculateShippingCost(weight, location, expedited = false) { //Establis
 };
 calculateShippingCost(10, "USA", true); //Logs the function with an output of 20
 calculateShippingCost(5, "Canada", false); //Logs the function with an output of 13.50
+
+//Task 5: Returning Values
+function calculateLoanInterest(principle, rate, years) { //Establishes the calculateLoanInterest as a function and lists its parameters
+    let interest = principle * rate * years; //Creates the equation from which the Total Interest will be generated
+    return `Total Interest: $${interest.toFixed(2)}`; //Logs the Format in which the calculated value will be shown in the console
+};
+console.log(calculateLoanInterest(1000, 0.05, 3)); //Logs parameters into the equation and generated an output of $150.00
+console.log(calculateLoanInterest(5000, 0.07, 5)); //Logs parameters into the equation and generates an output of $1750.00
