@@ -48,3 +48,15 @@ console.log(`High Value Functions: ${highValueTransaction}`); //Logs the functio
 };
 let transactions = [500, 1200, 3000, 800, 2200]; //Establishes the array containing the transactions
 filterHighValueTransactions(transactions, amount => amount > 1000); //Establishes the perameters for the equation to abide by to generate the output
+
+//Task 7: Closures
+function createBudgetTracker() { //Establishes the createBudgetTracker function
+    let totalBudget = 0; //Sets the total budget to zero to serve as a starting point
+    return function(budget) { //Establishes a function to calculate total budget
+        totalBudget -= budget; //Establishes the math which will take place as each logged value is ran through the tracker to contribute to the total budget value
+        return `Current Balance: $${totalBudget}` //Returns the totalBudget after a calculation as a template literal
+    };
+};
+let budget = createBudgetTracker(); //Establishes a Budget Tracker 
+console.log(budget(300)); //Generates an output of -$300
+console.log(budget(200)); //Generates an output of -$500
