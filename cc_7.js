@@ -60,3 +60,11 @@ function createBudgetTracker() { //Establishes the createBudgetTracker function
 let budget = createBudgetTracker(); //Establishes a Budget Tracker 
 console.log(budget(300)); //Generates an output of -$300
 console.log(budget(200)); //Generates an output of -$500
+
+//Task 8: Recursion in JavaScript
+function calculateGrowth(years, revenue) { //Establishes the calculateGrowth function
+    if (years >= 10) return revenue; //Establishes the base control for the situation, creating a cutoff at 10 years
+    return calculateGrowth(years + 1, revenue * 1.05); //Establishes equation to generate projected revenue
+}
+console.log(`Projected Revenue: $${calculateGrowth(8, 1000).toFixed(2)}`); //Generates an output of $1102.50 fixed to 2 decimal places
+console.log(`Projected Revenue: $${calculateGrowth(5, 5000).toFixed(2)}`); //Generates an output of $6381.41 fixed to 2 decimal places
